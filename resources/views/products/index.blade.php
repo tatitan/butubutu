@@ -10,9 +10,12 @@
     <body>
         <h1>出品一覧</h1>
         <div class='products'>
-            <div class='product'>
-                <p class='picture'>"商品の写真"</p>
-            </div>
+            @foreach($products as $product)
+                <div class='product'>
+                   <h2 class='title'>{{ $product->title }}</h2>
+                   <p class='picture'>"商品の写真"</p>
+                </div>
+            @endforeach
         </div>
     </body>
 </html>

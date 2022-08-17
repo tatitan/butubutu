@@ -9,6 +9,6 @@ class ProductController extends Controller
 {
     public function index(Product $product)
     {
-        return $product->get();
+        return view('products/index')->with(['products' => $product->get()]);
     }
 }
