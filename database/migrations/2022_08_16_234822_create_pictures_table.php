@@ -16,11 +16,11 @@ class CreatePicturesTable extends Migration
         Schema::create('pictures', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('product_id')->unique();
-            $table->binary('picture_1');
-            $table->binary('picture_2');
-            $table->binary('picture_3');
-            $table->binary('picture_4');
-            $table->binary('picture_5');
+            $table->binary('picture_1')->nullable();
+            $table->binary('picture_2')->nullable();
+            $table->binary('picture_3')->nullable();
+            $table->binary('picture_4')->nullable();
+            $table->binary('picture_5')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
