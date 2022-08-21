@@ -12,10 +12,13 @@
         <div class='products'>
             @foreach($products as $product)
                 <div class='product'>
-                   <h2 class='title'>{{ $product->title }}</h2>
-                   <p class='picture'>"商品の写真"</p>
+                   <h2 class='title'><a href="/products/{{ $product->id }}">{{ $product->title }}</a></h2>
+                   <p class='picture'>"商品の写真(1枚目)"</p>
                 </div>
             @endforeach
+        </div>
+        <div class='paginate'>
+            {{ $products->links() }}
         </div>
     </body>
 </html>
