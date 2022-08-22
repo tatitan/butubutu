@@ -9,7 +9,6 @@
     </head>
     <body>
         <h1>出品一覧</h1>
-        <p class='create'>[<a href="/products/create">新規出品</a>]</p>
         <div class='products'>
             @foreach($products as $product)
                 <div class='product'>

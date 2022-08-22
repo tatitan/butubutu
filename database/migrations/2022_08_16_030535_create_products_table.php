@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->unsignedBigInteger('seller_id');
             $table->string('title',50);
             $table->string('description',500);
-            $table->unsignedBigInteger('categoriy_id');
+            $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('exchange_id')->nullable()->unique();
             $table->timestamps();
             $table->softDeletes();
