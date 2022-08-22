@@ -19,5 +19,12 @@
 
 
 Route::get('/', 'ProductController@index');
+Route::get('/products/create', 'ProductController@create');
 Route::get('/products/{product}', 'ProductController@show');
+Route::get('/products/{product}/edit', 'ProductController@edit');
+Route::put('/products/{product}', 'ProductController@update');
+Route::post('/products', 'ProductController@store');
+
+
+Route::get('/categories/{category}', 'CategoryController@index');
 

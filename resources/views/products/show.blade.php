@@ -8,17 +8,18 @@
 
     </head>
     <body>
-        <h1 class=title>{{ $product->title }}</h1>
+        <h1 class='product_title'>{{ $product->title }}</h1>
+        <p class='edit'>[<a href="/products/{{ $product->id }}/edit">edit</a>]</p>
         <div class='content'>
-                <p class='picture'>"商品の写真(1枚目)"</p>
-                <p class='picture'>"商品の写真(2枚目)"</p>
-                <p class='picture'>"商品の写真(3枚目)"</p>
-                <p class='picture'>"商品の写真(4枚目)"</p>
-                <p class='picture'>"商品の写真(5枚目)"</p>
-                <h2 class='title'>{{ $product->title }}</h2>
-                <p class='description'>{{ $products->description }}</p>
-                <p class='category'>カテゴリー： . カテゴリー</p>
-                <p class='updated_at'>{{ $product->updated_at }}</p>
+            <p class='picture'>"商品の写真(1枚目)"</p>
+            <p class='picture'>"商品の写真(2枚目)"</p>
+            <p class='picture'>"商品の写真(3枚目)"</p>
+            <p class='picture'>"商品の写真(4枚目)"</p>
+            <p class='picture'>"商品の写真(5枚目)"</p>
+            <h2 class='title'>{{ $product->title }}</h2>
+            <p class='description'>{{ $product->description }}</p>
+            <p class='category'><a href="/categories/{{ $product->category->id }}"></a>カテゴリー：{{ $product->category->name }}</a></p>
+            <p class='updated_at'>{{ $product->updated_at }}</p>
         </div>
         <div class='back'>[<a href='/'>back</a>]</div>
     </body>
