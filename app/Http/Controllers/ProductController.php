@@ -41,4 +41,10 @@ class ProductController extends Controller
         $product->fill($input)->save();
         return redirect('/products/' . $product->id);
     }
+
+    public function destroy(Product $product)
+    {
+        $product->delete();
+        return redirect('/');
+    }
 }
