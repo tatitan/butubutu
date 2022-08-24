@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
 {
+    use SoftDeletes;
+
     protected $fillable = [
         'seller_id',
         'title',
@@ -18,6 +21,7 @@ class Product extends Model
     {
         return $this::with('category')->orderBy('updated_at' , 'DESC')->paginate($limit_count);
     }
+
 
 
 
